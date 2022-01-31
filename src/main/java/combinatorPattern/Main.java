@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         Customer customer = new Customer(
                 "Alice",
-                "alicegmail.com",
+                "alice@gmail.com",
                 "05123",
                 LocalDate.of(2000,1,1)
         );
@@ -22,6 +22,7 @@ public class Main {
                 .and(isPhoneNumberValid())
                 .and(isAnAdult())
                 .apply(customer);
+
 
         System.out.println(result);
 
