@@ -38,7 +38,12 @@ public class Main {
                 .filter(person -> FEMALE.equals(person.gender))
                 .collect(Collectors.toList());
 
+        List<Person> male = people.stream()
+                        .filter(person -> MALE.equals(person.gender))
+                        .collect(Collectors.toList());
+
         females2.forEach(System.out::println);
+        male.forEach(System.out::println);
 
         //Second Way
         /*people.stream()
