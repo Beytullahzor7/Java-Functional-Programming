@@ -1,5 +1,6 @@
 package functionalinterface;
 
+import java.util.Optional;
 import java.util.function.*;
 
 public class Trial {
@@ -20,6 +21,12 @@ public class Trial {
 
         Supplier<String> getWebAdress = () -> "www.google.com";
         System.out.println(getWebAdress.get());
+
+        Optional.ofNullable("abc@gmail.com").ifPresent(email -> System.out.println("sending email to: " + email));
+
+        Optional.ofNullable(null).ifPresentOrElse(email -> System.out.println("sending to: " +email),
+                () -> System.out.println("Please input your email"));
+
 
 
 

@@ -6,15 +6,15 @@ public class Lambdas {
     public static void main(String[] args) {
 
         //When u have only one return statement right after
-        Function<String, String> uppurCaseName = name -> name.toUpperCase();
+        Function<String, String> upperCaseName = name -> name.toUpperCase();
                                                 //String::toUpperCase;
 
-        Function<String, String> uppurCaseName2 = name -> {
-            if(name.isBlank()) throw new IllegalArgumentException("");
+        Function<String, String> upperCaseName2 = name -> {
+            if(name.isBlank()) throw new IllegalArgumentException("exception occured");
             return name.toUpperCase();
         };
 
-        String a = uppurCaseName2.apply("Alex");
+        String a = upperCaseName2.apply("");
         System.out.println(a);
     }
 }

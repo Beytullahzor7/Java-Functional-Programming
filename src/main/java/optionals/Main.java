@@ -8,6 +8,8 @@ public class Main {
         Object value =  Optional.ofNullable(null)
                 .orElseGet(() -> "default value");
 
+        System.out.println(value);
+
         Supplier<IllegalArgumentException> exception = () -> new IllegalArgumentException("exception");
         Object value2 = Optional.ofNullable("Hello")
                 .orElseThrow(exception);
